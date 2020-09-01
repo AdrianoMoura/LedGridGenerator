@@ -36,7 +36,7 @@ const MatrixComponent: FunctionComponent = () => {
     useEffect(() => {
         if (playing) {
             interval = setTimeout(() => {
-                if (activeFrame + dir > 6) {
+                if (activeFrame + dir > 5) {
                     dir = -1
                 } else if (activeFrame + dir < 0) {
                     dir = +1
@@ -52,7 +52,7 @@ const MatrixComponent: FunctionComponent = () => {
     const updateFrames = () => {
         const f: Frame = [];
 
-        for (let i = 0; i <= 6; i++) {
+        for (let i = 0; i <= 5; i++) {
             f[i] = [];
             for (let r = 0; r < height; r++) {
                 f[i][r] = [];
@@ -87,7 +87,7 @@ const MatrixComponent: FunctionComponent = () => {
 
     useEventListener('keydown', (e: any) => {
         if (e.key === 'ArrowUp') {
-            if (activeFrame < 6) {
+            if (activeFrame < 5) {
                 setActiveFrame(activeFrame + 1)
             }
         } else if (e.key === 'ArrowDown') {
@@ -196,7 +196,7 @@ const MatrixComponent: FunctionComponent = () => {
                 }
                 <div className="totalLeds">{width * height} leds</div>
                 <div className="slider">
-                    <input value={activeFrame} onChange={e => setActiveFrame(parseInt(e.target.value))} type="range" min="0" max="6" />
+                    <input value={activeFrame} onChange={e => setActiveFrame(parseInt(e.target.value))} type="range" min="0" max="5" />
                 </div>
                 <button onClick={play}>{playing ? 'Stop' : 'Play'}</button>
             </div>
