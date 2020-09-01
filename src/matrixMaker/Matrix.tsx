@@ -52,7 +52,7 @@ const MatrixComponent: FunctionComponent = () => {
     const updateFrames = () => {
         const f: Frame = [];
 
-        for (let i = 0; i <= 5; i++) {
+        for (let i = 0; i <= 6; i++) {
             f[i] = [];
             for (let r = 0; r < height; r++) {
                 f[i][r] = [];
