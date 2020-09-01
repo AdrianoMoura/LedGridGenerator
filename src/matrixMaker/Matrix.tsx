@@ -170,9 +170,6 @@ const MatrixComponent: FunctionComponent = () => {
                     Horizontal Spacing: <input type="text" value={spacingH} placeholder="Horizontal spacing" onChange={e => changeInput(setSpacingH, e.target.value)} />
                     Vertical Spacing: <input type="text" value={spacingV} placeholder="Vertical spacing" onChange={e => changeInput(setSpacingV, e.target.value)} />
                 </div>
-                <div className="medidas">
-                    Color picker: <input type="color" value={`#${selectedColor.toString(16)}`} onChange={e => setSelectedColor(parseInt(e.target.value.replace(/\#/g, '0x'), 16))} />
-                </div>
 
                 <div className="width">{(width * (ledSize + spacingH)) - spacingH}mm</div>
                 <div className="height">{(height * (ledSize + spacingV) - spacingV)}mm</div>
