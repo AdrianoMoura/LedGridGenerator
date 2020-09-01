@@ -1,0 +1,8 @@
+.led {
+    cursor: pointer;
+    background-color: #333;
+
+    &.fade-light:not(.light) {
+        opacity: .5;
+    }
+}

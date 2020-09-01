@@ -1,0 +1,98 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    max-width: 1024px;
+
+    .matrix {
+        display: flex;
+        flex-direction: column;
+        background-color: #000;
+        justify-content: center;
+        margin: 20px;
+        position: relative;
+        min-height: 300px;
+
+        input {
+            width: 50px;
+        }
+
+        .medidas {
+            margin: 10px auto 20px;
+            display: flex;
+            color: #fff;
+            height: 30px;
+            align-items: center;
+
+            input {
+                margin: 0 20px 0 5px;
+            }
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .width {
+            text-align: center;
+            color: #fff;
+        }
+
+        .height {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            text-align: center;
+            color: #fff;
+        }
+
+        .totalLeds {
+            text-align: center;
+            color: #fff;
+        }
+
+        .slider {
+            position: absolute;
+            right: 0px;
+            top: 50%;
+            transform: rotate(-90deg);
+
+            input {
+                width: 150px;
+                height: 10px;
+            }
+        }
+    }
+
+    button {
+        margin: 20px auto;
+        display: block;
+        min-width: 100px;
+        font-size: 14px;
+    }
+
+    .boxes {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        max-width: 800px;
+        width: 100%;
+
+        .box {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            margin: 10px 20px;
+            width: 100%;
+
+            textarea {
+                margin: 10px 0;
+                width: 100%;
+                height: 300px;
+            }
+        }
+    }
+}
